@@ -1,4 +1,3 @@
-import { mean, sum } from "ramda";
 
 const WineMeanInfoComponent = ({
     wineDataList,

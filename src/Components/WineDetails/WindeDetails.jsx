@@ -1,4 +1,3 @@
-import React, { useEffect, useState} from "react"
 import { WineMeanInfoComponent } from "./Components/WineMeanInfo/WineMeanInfo"
 import { WineMedianInfoComponent } from "./Components/WineMedianInfo/WineMedianInfo"
 import { WineModeInfoComponent } from "./Components/WineModeInfo/WineModeInfo"
