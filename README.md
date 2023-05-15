@@ -8,8 +8,4 @@ In the project directory, you can run:
 
 ### `yarn start`
 
-
-
-
-
-
+![Mean Median Mode](./src//assets/result.png)
