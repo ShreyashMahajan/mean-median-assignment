@@ -26,31 +26,21 @@ function App() {
   }, [] )
 
   const splitDataCategorywise = (dataList) => {
-    const sortedData = dataList.sort( (data1,data2) => data1.Alcohol > data2.Alcohol);
 
     let groupedData = [];
-    let subGroupedData = [];
-      
-      for(let i = 0 ; i < sortedData.length ; i++){
-        
-        if( i !== sortedData.length - 1){
-          if(sortedData[i].Alcohol === sortedData[i+1].Alcohol){
-            subGroupedData = [...subGroupedData, sortedData[i]]
-           }else {
-               subGroupedData = [...subGroupedData, sortedData[i]]
-               groupedData = [...groupedData, subGroupedData];
-               subGroupedData = [];
-           }
-          
-        }else {
-          subGroupedData = [...subGroupedData, sortedData[i]]
+let subGroupedData = [];
 
-          groupedData = [...groupedData, subGroupedData]
-           
-        }
-      }
-     return groupedData
-     
+for (let i = 0; i < dataList.length; i++) {
+  subGroupedData = [...subGroupedData, dataList[i]];
+
+  if (i !== dataList.length - 1 && dataList[i].Alcohol !== dataList[i + 1].Alcohol) {
+    groupedData = [...groupedData, subGroupedData];
+    subGroupedData = [];
+  }
+}
+
+groupedData = [...groupedData,subGroupedData];
+return groupedData;
     }
   return (
     <div className="App">
